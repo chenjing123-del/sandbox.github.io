@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Sandbox</title>
+    <!-- 更新CSS文件路径 -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Online Sandbox</h1>
+    <button id="complete-btn">完成并发送截图</button>
+    <div class="container">
+        <!-- 分类下拉框 -->
+        <div class="category-dropdown">
+            <select id="category-select">
+                <option value="人物">人物</option>
+                <option value="动物">动物</option>
+                <option value="植物">植物</option>
+                <option value="建筑">建筑</option>
+                <option value="工具">工具</option>
+                <option value="自然景观">自然景观</option>
+            </select>
+        </div>
+
+        <!-- 左侧物件列表 -->
+        <div class="sidebar" id="sidebar">
+            <!-- 默认显示人物分类 -->
+            <div class="item" draggable="true" data-type="家庭成员">👨‍👩‍👧‍👦</div>
+            <div class="item" draggable="true" data-type="老师">👩🏻‍🏫</div>
+            <div class="item" draggable="true" data-type="医生">👨🏻‍⚕️</div>
+            <div class="item" draggable="true" data-type="圣诞老人">🎅🏻</div>
+            <div class="item" draggable="true" data-type="卡通及故事人物">🦸‍♂️</div>
+            <div class="item" draggable="true" data-type="公主">👩</div>
+            <div class="item" draggable="true" data-type="王子">🤴</div>
+        </div>
+
+        <!-- 中间沙盘区域 -->
+        <div class="sandbox" id="sandbox"></div>
+    </div>
+    <!-- 更新JavaScript文件路径 -->
+    <script src="JavaScript/script.js"></script>
+    <!-- 外部库的引用保持不变 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>

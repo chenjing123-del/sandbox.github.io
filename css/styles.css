@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.category-dropdown {
+    margin-bottom: 20px;
+}
+
+.category-dropdown select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.sidebar .item {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    cursor: grab;
+    text-align: center;
+    font-size: 24px;
+}
+
+.sandbox {
+    width: 75%;
+    height: 600px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.sandbox-item {
+    position: absolute;
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none; /* 防止用户选中文本 */
+    transform-origin: center; /* 确保缩放以中心为基准 */
+}
+
+.sandbox-item.dragging {
+    opacity: 0.8; /* 拖拽时降低透明度 */
+    cursor: grabbing; /* 拖拽时显示抓取光标 */
+}
