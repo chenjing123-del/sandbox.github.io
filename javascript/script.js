@@ -193,7 +193,41 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         return '❓';
     }
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('JavaScript 文件已加载！');
 
+    const sandbox = document.getElementById('sandbox');
+    const completeBtn = document.getElementById('complete-btn');
+    const clearBtn = document.getElementById('clear-btn');
+
+    // 完成按钮点击事件
+    if (completeBtn) {
+        completeBtn.addEventListener('click', function () {
+            alert('完成按钮点击成功！');
+            // 这里可以添加截图和发送邮件的逻辑
+        });
+    } else {
+        console.error('未找到 complete-btn 按钮');
+    }
+
+    // 清空按钮点击事件
+    if (clearBtn) {
+        clearBtn.addEventListener('click', function () {
+            clearSandbox();
+        });
+    } else {
+        console.error('未找到 clear-btn 按钮');
+    }
+
+    // 清空沙盘函数
+    function clearSandbox() {
+        while (sandbox.firstChild) {
+            sandbox.removeChild(sandbox.firstChild);
+        }
+        console.log('沙盘已清空！');
+        alert('沙盘已清空！');
+    }
+});
     // 保存沙盘状态
     function saveSandbox() {
         const items = [];
